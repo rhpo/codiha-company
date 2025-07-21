@@ -57,6 +57,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem;
+		justify-content: center;
 	}
 
 	@media (max-width: 768px) {

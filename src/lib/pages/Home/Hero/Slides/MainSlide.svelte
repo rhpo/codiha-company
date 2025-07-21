@@ -92,5 +92,13 @@
 		.background {
 			flex-direction: column; /* Stack images vertically on smaller screens */
 		}
+
+		.background .image-wrapper {
+			height: 33.33%; /* Adjust height for smaller screens */
+		}
+
+		.content {
+			padding: 2rem; /* Add padding for better spacing */
+		}
 	}
 </style>

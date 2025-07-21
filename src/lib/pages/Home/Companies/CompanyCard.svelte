@@ -25,7 +25,6 @@
 		glare: true,
 		'max-glare': 0.5
 	}}
-	style="width: fit-content; height: fit-content;"
 >
 	<a
 		class="card"
@@ -63,6 +62,11 @@
 
 	.card {
 		display: block;
+	}
+
+	.wrapper {
+		width: fit-content;
+		height: fit-content;
 	}
 
 	.wrapper:hover {
@@ -131,15 +135,18 @@
 		.card,
 		main {
 			width: 100%;
+			height: 100%;
 		}
 
-		.content {
-			padding: 24px 20px;
-			min-height: 140px;
+		.wrapper {
+			width: 100%;
+			aspect-ratio: 380 / 400;
+
+			height: unset;
 		}
 
 		.title {
-			font-size: 1.3rem;
+			font-size: 1rem;
 		}
 	}
 </style>
