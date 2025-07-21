@@ -31,7 +31,7 @@ export const companies: Company[] = [
 			fr: `${BRAND_NAME} Agency web spécialisée dans la création de sites internet et d'applications web, le tout en Algérie.`,
 			en: `${BRAND_NAME} Agency is a web agency specialized in creating websites and web applications, all in Algeria.`
 		},
-		image: `/banners/agency.jpg`,
+		image: `/banners/new-agency.png`,
 		cover: `/companies/agency.jpg`,
 		color: '#002157', // Optional color property
 		url: 'https://agency.codiha.com' // Optional URL property
@@ -47,7 +47,7 @@ export const companies: Company[] = [
 			fr: `${BRAND_NAME} E-Academy est une plateforme éducative dédiée à l'apprentissage des technologies modernes et à la formation continue.`,
 			en: `${BRAND_NAME} E-Academy is an educational platform dedicated to learning modern technologies and continuous training.`
 		},
-		image: `/banners/academy.jpg`,
+		image: `/banners/new-academy.png`,
 		cover: `/companies/academy.jpg`,
 
 		color: '#5e20ee', // Optional color property
@@ -64,7 +64,7 @@ export const companies: Company[] = [
 			en: `${BRAND_NAME} Club is a student-led IT club made in 2023 with many activities, events & workshops.`,
 			fr: '${BRAND_NAME} Club est un club étudiant en informatique créé en 2023 avec de nombreuses activités, événements et ateliers.'
 		},
-		image: `/banners/club.jpg`,
+		image: `/banners/new-club.png`,
 		cover: `/companies/club.jpg`,
 
 		color: '#006eff', // Optional color property

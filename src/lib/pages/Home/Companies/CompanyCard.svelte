@@ -11,34 +11,48 @@
 	import { getContext } from 'svelte';
 	import { type TextFunction } from '$lib/stores/language';
 	import Logo from '$lib/components/Logos/Logo.svelte';
+	import svelteTilt from 'vanilla-tilt-svelte';
 	let text = getContext<TextFunction>('text');
 </script>
 
-<a
-	class="card"
-	href={url}
-	target="_blank"
-	rel="noopener noreferrer"
-	data-aos="flip-right"
-	data-aos-duration="800"
-	data-aos-delay={index * 200}
+<div
+	class="wrapper"
+	use:svelteTilt={{
+		scale: 1.05,
+		speed: 400,
+		max: 15,
+		perspective: 1000,
+		glare: true,
+		'max-glare': 0.5
+	}}
+	style="width: fit-content; height: fit-content;"
 >
-	<main style="background-color: {color || '#f0f0f0'}; background-image: url({image}); ">
-		<div class="content" style="background-color: {color || '#f0f0f0'};">
-			<h2 class="title">{title}</h2>
-			<span class="link">
-				<div class="logo">
-					<Logo animated fill="white" />
-				</div>
-				{text({
-					en: 'Visit',
-					fr: 'Visiter'
-				})}
-				{name}
-			</span>
-		</div>
-	</main>
-</a>
+	<a
+		class="card"
+		href={url}
+		target="_blank"
+		rel="noopener noreferrer"
+		data-aos="flip-right"
+		data-aos-duration="800"
+		data-aos-delay={index * 200}
+	>
+		<main style="background-color: {color || '#f0f0f0'}; background-image: url({image}); ">
+			<div class="content" style="background-color: {color || '#f0f0f0'};">
+				<h2 class="title">{title}</h2>
+				<span class="link">
+					<div class="logo">
+						<Logo animated fill="white" />
+					</div>
+					{text({
+						en: 'Visit',
+						fr: 'Visiter'
+					})}
+					{name}
+				</span>
+			</div>
+		</main>
+	</a>
+</div>
 
 <style>
 	.card,
@@ -49,10 +63,9 @@
 
 	.card {
 		display: block;
-		transition: all var(--transition-duration) var(--transition-easing);
 	}
 
-	.card:hover {
+	.wrapper:hover {
 		transform: scale(1.05) translateY(-10px);
 	}
 
@@ -67,10 +80,9 @@
 		flex-direction: column;
 		justify-content: flex-end;
 
-		background-size: 400px 72%;
-		background-position: center;
+		background-size: 100% 75%;
+		background-position: center 0;
 		background-repeat: no-repeat;
-		background-position: 0 0;
 	}
 
 	.content {
