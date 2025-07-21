@@ -30,6 +30,11 @@
 		transition: fill var(--transition-duration) var(--transition-easing);
 	}
 
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+
 	:global(html.dark) path {
 		fill: white;
 	}

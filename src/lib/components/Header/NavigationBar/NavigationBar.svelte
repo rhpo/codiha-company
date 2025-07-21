@@ -47,6 +47,7 @@
 
 	.image {
 		width: calc(0.6 * var(--navbar-height));
+		height: calc(0.6 * var(--navbar-height));
 		display: flex;
 		align-items: center;
 		justify-content: center;
